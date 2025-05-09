@@ -1,0 +1,66 @@
+kenderes2 Róbert Kendereš BillboardSongs
+
+
+
+SUBMITTED FILES:
+
+folder billboardProject
+    folder spiders 
+        __init__.py 
+        spiderWiki.py
+    __init__.py
+    items.py
+    middlewares.py
+    pipelines.py
+    settings.py
+
+cleanup.py
+billboard1.csv 
+billboard2.csv 
+billboardFixed.csv 
+billboardConsolidated.csv 
+songs.csv 
+visualizer.ipynb
+
+requirmens.txt
+scrapy.cfg
+
+project_report_kenderes2.pdf
+
+
+
+COMMANDS USED:
+
+scrapy crawl spiderWiki -o billboard1.csv
+scrapy crawl spiderBillboard -o billboard2.csv
+python3 cleanup.py 
+scrapy crawl spiderSong -o songs.csv
+
+
+
+
+PROCESS:
+
+spiderWiki.py contains 3 crawlers, which are used to first build database of years of lists of billboard songs and their links (spiderWiki),
+then to build a database of songs in each year and links to each song (spiderBillboard), and then to build a final database of songs and information about them (spiderSong)
+
+Before creating the final database we use cleanup.py to fix not functional links or errors in names, as well as removing songs that occurr multiple times and just adding a count of occurences column
+
+
+
+STRUCTURES OF TABLES:
+
+billboard1.csv - year,era,pre-2012,url 
+billboard2.csv - title,artist,year,era,url
+songs.csv - title,artist,count,year of release,genre,length
+
+
+
+VISUALIZATIONS/CONCLUSIONS:
+1 - Overall number of occurences in Billboard per genre (top 20 genres)
+2 - Median duration of songs on Billboard over the years
+3 - Top 20 artists with most occurences on Billboard
+4 - Duration of songs per genre
+5 - Popularity of genres by year of release
+
+
