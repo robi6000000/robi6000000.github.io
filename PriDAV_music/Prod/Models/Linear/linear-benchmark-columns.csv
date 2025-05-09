@@ -1,0 +1,17 @@
+,0
+0,year
+1,acousticness
+2,danceability
+3,duration_ms
+4,energy
+5,instrumentalness
+6,key
+7,liveness
+8,loudness
+9,mode
+10,speechiness
+11,tempo
+12,time_signature
+13,valence
+14,artist_count
+15,avg_artist_popularity
