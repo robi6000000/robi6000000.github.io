@@ -2,163 +2,211 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Róbert Kendereš</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i&subset=cyrillic" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-icons.css" rel="stylesheet">
-  <link href="boxicons.min.css" rel="stylesheet">
-  <link href="glightbox.min.css" rel="stylesheet">
-  <link href="swiper-bundle.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5efef;
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      padding-bottom: 60px;
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="style.css" rel="stylesheet">
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin: 40px 0 20px;
+    }
 
-  <!-- =======================================================
-  * Template Name: Lonely
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-lonely/
-  * Updated: Mar 17 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .section {
+      padding: 40px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #eaeaea;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .portfolio-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px;
+      width: 300px;
+    }
+
+    .portfolio-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+
+    .portfolio-info a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    .portfolio-info a:hover {
+      transform: scale(1.2);
+      color: #ffc107;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .education-details {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .education-details ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
+  <!-- Name -->
+  <header class="section">
     <h1>Róbert Kendereš</h1>
-    <a href="#portfolio" class="btn-get-started scrollto"><img src="arrow-down.svg" height="50" width="50"></a>
-  </section><!-- End Hero -->
+  </header>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <h2>Education</h2>
+    <div class="education-details">
+      <p><strong>Faculty of Mathematics, Physics and Informatics</strong>, Comenius University Bratislava</p>
+      <p><em>Sept 2022 – Jun 2026</em></p>
+        <p>Field of Study: Data Science</p>
+        <p>Coursework: Data Management, Data Visualisation, Statistical Inference, Data Structures and Algorithms, Programming (Python, C++, R), Web Technologies (HTML, CSS, JS)</p>
+      
     </div>
-  </header><!-- End Header -->
+  </section>
 
-  <main id="main">
+  <!-- Projects Section -->
+<section class="section projects" id="projects">
+  <h2>Projects</h2>
+  <div class="container project-grid">
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+    <!-- COVID Project -->
+    <div class="portfolio-wrap">
+      <img src="coronavirus.jpg" class="img-fluid" alt="Covid-19 Project" style="border-radius: 8px;">
+      <div class="portfolio-info">
+        <h5>Určovanie kvality vzorky genómov Covid-19</h5>
+        <div class="d-flex">
+          <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/covid%20project" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://robi6000000.github.io/robi6000000.github.io/covid%20project/Správa - ŠPARK (5).pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
-
-        
-
-        <div class="row portfolio-container">
-
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="wine.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Predikcia kvality vín</h4>
-              </div>
-              <div class="portfolio-links">
-                <a href="https://github.com/spitalskya/Linprog-A04/tree/cb6cc6981c8fff1aede99ba62224ae41692f4c20/final" title="More Details"><img src="link-45deg.svg" width="40" height="40"></a>
-                <a href="https://github.com/spitalskya/Linprog-A04/blob/cb6cc6981c8fff1aede99ba62224ae41692f4c20/final/report.pdf" title="More Details"><img src="file-earmark.svg" width="40" height="40"></a>
-
-              </div>
-
-            </div>
-          </div> -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="coronavirus.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Určovanie kvality vzorky genómov Covid-19</h4>
-              </div>
-              <div class="portfolio-links">
-                <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/covid%20project" title="More Details"><img src="link-45deg.svg" width="40" height="40"></a>
-                <a href="https://github.com/robi6000000/robi6000000.github.io/blob/main/covid%20project/Spr%C3%A1va%20-%20%C5%A0PARK.docx" title="More Details"><img src="file-earmark.svg" width="40" height="40"></a>
-              </div>
-            </div>
-          </div>
-
-          
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="info">
-              <div class="d-flex align-items-center mt-4">
-                <!-- <img src="envelope.svg" height="20" width="20"> -->
-                <p>robertkenderes350@gmail.com</p>
-              </div>
-
-              <div class="d-flex align-items-center mt-4">
-                <!-- <img src="phone.svg" height="20" width="20"> -->
-                <p>+421 907 543 328</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-lonely/ -->
-        Róbert Kendereš <br>2024
       </div>
     </div>
-  </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Wine Quality -->
+    <div class="portfolio-wrap">
+      <img src="placeholder.jpg" class="img-fluid" alt="Wine Quality">
+      <div class="portfolio-info">
+        <h5>Wine Quality Prediction</h5>
+        <div class="d-flex">
+          <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/A04%20-%20preikcia%20kvality%20vin" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://robi6000000.github.io/robi6000000.github.io/A04%20-%20preikcia%20kvality%20vin/report.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+        </div>
+      </div>
+    </div>
 
-  <!-- Vendor JS Files -->
-  <script src="purecounter_vanilla.js"></script>
-  <script src="bootstrap.bundle.min.js"></script>
-  <script src="glightbox.min.js"></script>
-  <script src="isotope.pkgd.min.js"></script>
-  <script src="swiper-bundle.min.js"></script>
-  <script src="noframework.waypoints.js"></script>
-  <script src="validate.js"></script>
+    <!-- Billboard Scraper -->
+    <div class="portfolio-wrap">
+      <img src="placeholder.jpg" class="img-fluid" alt="Billboard Scraper">
+      <div class="portfolio-info">
+        <h5>Billboard Charts Wikipedia Scraper</h5>
+        <div class="d-flex">
+          <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/billboard" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://robi6000000.github.io/robi6000000.github.io/billboard/project_report_kenderes2.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+        </div>
+      </div>
+    </div>
 
-  <!-- Template Main JS File -->
-  <script src="main.js"></script>
+    <!-- Statistical Inference -->
+    <div class="portfolio-wrap">
+      <img src="placeholder.jpg" class="img-fluid" alt="Statistical Inference">
+      <div class="portfolio-info">
+        <h5>Statistical Inference Project</h5>
+        <div class="d-flex">
+          <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/statprojekt" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://robi6000000.github.io/robi6000000.github.io/statprojekt/Statisticke_metody___kenderes.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spotify -->
+    <div class="portfolio-wrap">
+      <img src="placeholder.jpg" class="img-fluid" alt="Spotify Project">
+      <div class="portfolio-info">
+        <h5>Song Popularity – Spotify</h5>
+        <div class="d-flex">
+          <a href="https://github.com/Sammuel21/pridav-music-project" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://github.com/robi6000000/robi6000000.github.io/blob/main/PriDAV_music/README.md" title="README" target="_blank"><i class="bi bi-file-earmark"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heart Disease -->
+    <div class="portfolio-wrap">
+      <img src="placeholder.jpg" class="img-fluid" alt="Heart Disease Prediction">
+      <div class="portfolio-info">
+        <h5>Heart Disease Prediction</h5>
+        <div class="d-flex">
+          <a href="https://github.com/NataliaKrebesova/mvo_project_2025" title="GitHub"><i class="bi bi-link-45deg"></i></a>
+          <a href="https://NataliaKrebesova.github.io/mvo_project_2025/report/main.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p class="text-center">Email: robertkenderes350@gmail.com</p>
+    <p class="text-center">Phone: +421 907 543 328</p>
+  </section>
 
 </body>
 
