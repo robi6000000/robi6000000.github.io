@@ -18,22 +18,35 @@
       background-color: #f5efef;
       font-family: 'Open Sans', sans-serif;
       color: #333;
-      padding-bottom: 60px;
+      padding-bottom: 10px;
+    }
+    header {
+      background-color: #f5efef;
+      padding: 40px 0;
     }
 
-    h1, h2 {
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 4rem;
+      margin: 40px 0 5px; 
+    }
+
+    h2 {
       font-family: 'Playfair Display', serif;
       text-align: center;
       margin: 40px 0 20px;
     }
 
-    .section {
+    .navbar{ border-bottom: 1px solid #ddd;}
+    .section #projects {
       padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 10px;
       font-size: 14px;
       background-color: #eaeaea;
       position: fixed;
@@ -42,13 +55,22 @@
     }
 
     .portfolio-wrap {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 20px;
-      width: 300px;
-    }
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 20px;
+  width: 300px;
+  height: 200px; /* or use aspect-ratio: 1 / 1; */
+}
+
+.portfolio-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
 
     .portfolio-info {
       position: absolute;
@@ -106,13 +128,43 @@
 
   <!-- Name -->
   <header class="section">
-    <h1>Róbert Kendereš</h1>
-  </header>
+  <h1>Róbert Kendereš</h1>
+</header>
+
+  <!-- Navigation -->
+<nav 
+  class="navbar" 
+  style="background-color: #f5efef; justify-content: center; padding: 0.5rem 0;"
+>
+  <ul class="navbar-nav d-flex flex-row">
+    <li class="nav-item mx-3">
+      <a 
+        class="nav-link d-flex align-items-center" 
+        href="https://robi6000000.github.io/Robert_Kenderes_CV.pdf" 
+        target="_blank" 
+        rel="noopener"
+      >
+        <i class="bi bi-link-45deg me-1"></i> CV
+      </a>
+    </li>
+    <li class="nav-item mx-3">
+      <a class="nav-link" href="#education">Education</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a class="nav-link" href="#projects">Projects</a>
+    </li>
+    <li class="nav-item mx-3">
+      <a class="nav-link" href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
 
   <!-- Education Section -->
   <section class="section" id="education">
     <h2>Education</h2>
     <div class="education-details">
+
       <p><strong>Faculty of Mathematics, Physics and Informatics</strong>, Comenius University Bratislava</p>
       <p><em>Sept 2022 – Jun 2026</em></p>
         <p>Field of Study: Data Science</p>
@@ -130,70 +182,70 @@
     <div class="portfolio-wrap">
       <img src="coronavirus.jpg" class="img-fluid" alt="Covid-19 Project" style="border-radius: 8px;">
       <div class="portfolio-info">
-        <h5>Určovanie kvality vzorky genómov Covid-19</h5>
+        <h5>Determining quality of Covid-19 genome samples</h5>
         <div class="d-flex">
           <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/covid%20project" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://robi6000000.github.io/robi6000000.github.io/covid%20project/Správa - ŠPARK (5).pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://robi6000000.github.io/covid%20project/Správa - ŠPARK (5).pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Wine Quality -->
     <div class="portfolio-wrap">
-      <img src="placeholder.jpg" class="img-fluid" alt="Wine Quality">
+      <img src="wine.png" class="img-fluid" alt="Wine Quality">
       <div class="portfolio-info">
-        <h5>Wine Quality Prediction</h5>
+        <h5>Wine Quality Prediction - Linear Programming</h5>
         <div class="d-flex">
           <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/A04%20-%20preikcia%20kvality%20vin" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://robi6000000.github.io/robi6000000.github.io/A04%20-%20preikcia%20kvality%20vin/report.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://robi6000000.github.io/A04%20-%20preikcia%20kvality%20vin/report.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Billboard Scraper -->
     <div class="portfolio-wrap">
-      <img src="placeholder.jpg" class="img-fluid" alt="Billboard Scraper">
+      <img src="billboard-logo-placeholder-1548-1614291410.png" class="img-fluid" alt="Billboard Scraper">
       <div class="portfolio-info">
         <h5>Billboard Charts Wikipedia Scraper</h5>
         <div class="d-flex">
           <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/billboard" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://robi6000000.github.io/robi6000000.github.io/billboard/project_report_kenderes2.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://robi6000000.github.io/billboard/project_report_kenderes2.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Statistical Inference -->
     <div class="portfolio-wrap">
-      <img src="placeholder.jpg" class="img-fluid" alt="Statistical Inference">
+      <img src="GOLD-6487-CareerGuide-Batch04-Images-GraphCharts-02-Bar.jpg" class="img-fluid" alt="Statistical Inference">
       <div class="portfolio-info">
-        <h5>Statistical Inference Project</h5>
+        <h5>Statistical Inference Project - Tests, Regression</h5>
         <div class="d-flex">
           <a href="https://github.com/robi6000000/robi6000000.github.io/tree/main/statprojekt" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://robi6000000.github.io/robi6000000.github.io/statprojekt/Statisticke_metody___kenderes.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://robi6000000.github.io/statprojekt/Statisticke_metody___kenderes.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Spotify -->
     <div class="portfolio-wrap">
-      <img src="placeholder.jpg" class="img-fluid" alt="Spotify Project">
+      <img src="spotify_wc7u.1200.png" class="img-fluid" alt="Spotify Project">
       <div class="portfolio-info">
-        <h5>Song Popularity – Spotify</h5>
+        <h5>Song Popularity Modelling – Spotify</h5>
         <div class="d-flex">
           <a href="https://github.com/Sammuel21/pridav-music-project" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://github.com/robi6000000/robi6000000.github.io/blob/main/PriDAV_music/README.md" title="README" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://github.com/Sammuel21/pridav-music-project/blob/main/README.md" title="README" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
 
     <!-- Heart Disease -->
     <div class="portfolio-wrap">
-      <img src="placeholder.jpg" class="img-fluid" alt="Heart Disease Prediction">
+      <img src="CardiovascularSystem-1155264877-696x502.jpg" class="img-fluid" alt="Heart Disease Prediction">
       <div class="portfolio-info">
-        <h5>Heart Disease Prediction</h5>
+        <h5>Heart Disease Prediction - Logistic Regression</h5>
         <div class="d-flex">
           <a href="https://github.com/NataliaKrebesova/mvo_project_2025" title="GitHub"><i class="bi bi-link-45deg"></i></a>
-          <a href="https://NataliaKrebesova.github.io/mvo_project_2025/report/main.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
+          <a href="https://robi6000000.github.io/mvo/mvo_104bpm_project.pdf" title="Report" target="_blank"><i class="bi bi-file-earmark"></i></a>
         </div>
       </div>
     </div>
